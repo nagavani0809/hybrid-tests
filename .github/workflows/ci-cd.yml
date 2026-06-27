@@ -18,7 +18,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest requests
-      - run: python -m pytest tests/api_tests
+      - run: python -m pytest Test/api_test
 
   selenium-tests:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest robotframework-seleniumlibrary selenium
-      - run: python -m pytest tests/selenium_tests
+      - run: python -m pytest Test/selenium_tests
 
   robot-tests:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install robotframework
-      - run: python -m robot tests/robot_tests
+      - run: python -m robot Test/robot_test
 
   deploy:
     runs-on: ubuntu-latest
